@@ -1,3 +1,5 @@
-global users
 def banlst():
-  users = ["Test"]
+  global users
+  users = ["Arch","Bojo"]
+  return users
+banlst()
