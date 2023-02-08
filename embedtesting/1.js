@@ -8,8 +8,9 @@ function createdropdown(id,amount,names,values) {
         var opt = document.createElement("option");
         opt.setAttribute("id",names[int]);
         opt.setAttribute("value",values[int]);
+        opt.text = names[int]
         int++;
-        var select = document.getElementById(id)
+        var select = document.getElementById(id);
         select.appendChild(opt);
     }
 }
