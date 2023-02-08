@@ -1,5 +1,6 @@
 var optcount = 1;
 var int = 0;
+console.info("Loaded file.")
 function createdropdown(id, amount, names, values) {
     for(let vars = 0; vars<amount+1; vars++) {
         if(names.length != values.length || names.length != amount || values.length != amount) {
