@@ -12,9 +12,4 @@ function createdropdown(id,amount,names,values) {
         int++;
         select.appendChild(opt);
     }
-    int = 0
-        for(let vars = 0; vars<amount+1; vars++) {
-            document.getElementById(names[int]).text = names[int]
-            int++;
-        }
 }
