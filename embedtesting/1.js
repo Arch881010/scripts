@@ -1,21 +1,21 @@
-var optcount = 1;
-var int = 0;
-console.info("Loaded file.")
-function createdropdown(id, amount, names, values) {
+console.info("Loaded file (https://arch881010.github.io/scripts/embedtesting/1.js).")
+function createdropdown(divid, names, values) {
+    optcount = 1;
+    int = 0;
     for(let vars = 0; vars<amount+1; vars++) {
-        if(names.length != values.length || names.length != amount || values.length != amount) {
+        if(names.length != values.length) {
+            if(names.length > values.length) data = "You have more names than supplied values. Names > Values";
+            else data = "You have less names than supplied names. Names < Values";
             console.group("Error.")
-                console.warn("The names != values test:", names.length == values,"\nThe names != amount test:",names.length == amount, "\nThe values != amount test:", values.length == amount)
-                console.error("At least 1 error occured. Please fix based on example.")
-                console.info(`Example: "The names != values test: false", "The names != amount test: false". To fix it, you need to make sure there is how many names supplied to amount of values. `)
+                console.log(data)
             break;
         }
-        var opt = document.createElement("option");
+        opt = document.createElement("option");
         opt.setAttribute("id",names[int]);
         opt.setAttribute("value",values[int]);
         opt.text = names[int];
         int++;
-        var select = document.getElementById(id);
+        var select = document.getElementById(divid);
         select.appendChild(opt);
     }
 }
